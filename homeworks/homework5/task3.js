@@ -20,3 +20,4 @@ let countForDoWhile = 1;
     console.log(number + " x " + countForDoWhile + " = " + number*countForDoWhile);
     countForDoWhile++;
 } while (countForDoWhile < 11)
+    
