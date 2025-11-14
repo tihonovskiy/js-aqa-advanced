@@ -1,12 +1,19 @@
 const users = [
     { name: "Іван", email: "ivan@gmail.com", age: 25 },
-    { name: "Олена", email: "olena@gmail.com", age: 30 },
-    { name: "Максим", email: "max@gmail.com", age: 22 }
+    { name: "Олена", age: 30 },
+    { email: "max@gmail.com" },
+    { name: "Андрій" }
 ];
 
-for (const { name, email, age } of users) {
-    console.log("Ім'я:", name);
-    console.log("email:", email);
-    console.log("Вік:", age);
+for (const user of users) {
+    const {
+        name = null,
+        email = null,
+        age = null
+    } = user;
+
+    console.log("Ім'я:", name ?? "Невідомо");
+    console.log("Email:", email ?? "Невідомо");
+    console.log("Вік:", age ?? "Невідомо");
     console.log();
 }
